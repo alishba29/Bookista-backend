@@ -10,6 +10,12 @@ const Cart = require("./routes/cart");
 const Order = require("./routes/order");
 //routes
 //check
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+header(
+  "Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Authorization"
+);
+
 app.use(
   cors({
     origin: ["https://deploy-mern-1whq.vercel.app"],
@@ -18,7 +24,7 @@ app.use(
   })
 );
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 app.use(express.static("frontend/public"));
 app.get("/", (req, res, next) => res.json("Hello world"));
