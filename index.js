@@ -12,10 +12,7 @@ const Order = require('./routes/order');
 // CORS configuration
 app.use(
 	cors({
-		origin: [
-			'https://bookistaa.vercel.app',
-			'https://frontend-4oe5yncjb-alishbas-projects-db514d5a.vercel.app',
-		],
+		origin: ['https://bookistaa.vercel.app', 'https://bookistaa.vercel.app'],
 		methods: ['POST', 'GET', 'PUT', 'DELETE'],
 		credentials: true,
 	})
